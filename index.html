@@ -8,10 +8,18 @@
 </head>
 
 <body>
-    <h1>HTML DOM Events</h1>
 
-    <h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
-   
+    <p>onload and onunload Events</p>
+    
+Enter your name: <input type="text" id="fname" oninput="upperCase()">
+<p>When you write in the input field, a function is triggered to transform the input to upper case.</p>
+
+<script>
+function upperCase() {
+  const x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
 
 </body>
 
