@@ -8,20 +8,19 @@
 </head>
 
 <body>
-    <h1>DOM Element by id</h1>
-    <div id="main">
-        <p>Hi I am Rushikesh</p>
-        <p>I like coding</p>
+    <h1>DOM Element by class Nmae</h1>
+    <div>
+        <p class="main">Hi I am Rushikesh</p>
+        <p class="main">I like coding</p>
     </div>
     <p id="demo"></p>
 
     <script>
-        // Accessing the dom by tag name
-        const x = document.getElementById("main");
-        const y = document.getElementsByTagName("p");
+        // Accessing the dom by class name
+        const x = document.getElementsByClassName("main");
 
-        // Print the value of tag
-        document.getElementById("demo").innerHTML = "The first paragraph inside main is : " + y[0].innerHTML;
+        // Print the value of class
+        document.getElementById("demo").innerHTML = "The first paragraph inside main class  is : " + x[0].innerHTML;
     </script>
 
 </body>
