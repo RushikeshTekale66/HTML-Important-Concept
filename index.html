@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Concepts</title>
 </head>
+
 <body>
-    <h1>DOM Element</h1>
-    <p id="intro">Hi I am Rushikesh</p>
+    <h1>DOM Element by id</h1>
+    <div id="main">
+        <p>Hi I am Rushikesh</p>
+        <p>I like coding</p>
+    </div>
     <p id="demo"></p>
 
     <script>
-        // Accessing the dom by id name
-        const element = document.getElementById("intro");
-        
-        // send this element to another element & also add some extra data
-        document.getElementById("demo").innerHTML="Extra Text " + element.innerHTML;
+        // Accessing the dom by tag name
+        const x = document.getElementById("main");
+        const y = document.getElementsByTagName("p");
+
+        // Print the value of tag
+        document.getElementById("demo").innerHTML = "The first paragraph inside main is : " + y[0].innerHTML;
     </script>
-    
+
 </body>
+
 </html>
