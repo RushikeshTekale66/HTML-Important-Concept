@@ -9,16 +9,14 @@
 
 <body>
 
-    <p>onload and onunload Events</p>
-    
-Enter your name: <input type="text" id="fname" oninput="upperCase()">
-<p>When you write in the input field, a function is triggered to transform the input to upper case.</p>
+    <p>Event Listner</p>
+    <button id="btn">Click me</button>
 
 <script>
-function upperCase() {
-  const x = document.getElementById("fname");
-  x.value = x.value.toUpperCase();
-}
+    document.getElementById("btn").addEventListener("click", myEvent);
+    function myEvent(){
+        alert("Button Click")
+    }
 </script>
 
 </body>
