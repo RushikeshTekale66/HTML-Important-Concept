@@ -9,28 +9,26 @@
 
 <body>
 
-   <h1>HTML Collection</h1>
+   <h1>DOM NodeList Object</h1>
    <p>First</p>
    <p>Second</p>
    <p>Third</p>
 
-   <button onclick="myfunction()">Click me</button>
-
-   <h4>Length of collection</h4>
+   <h4>Length of NodeList</h4>
    <h5 id="length"></h5>
 
+   <h1>Node List Demo</h1>
+   <p id="demo"></p>
+
     <script>
-        const myCollection = document.getElementsByTagName("p");
+        // NodeList
+        const myNodeList = document.querySelectorAll("p");
 
-        document.getElementById("length").innerHTML = myCollection.length;
+        // Length of nodeList
+        document.getElementById("length").innerHTML = myNodeList.length;
 
-        // For changing property
-        function myfunction(){
-            for(let i=0; i<myCollection.length; i++){
-                myCollection[i].style.backgroundColor = "red";
-            }
-        }
-
+        // Access Node List
+        document.getElementById("demo").innerHTML = "Inner html of second paragraph is :  " + myNodeList[2].innerHTML;
        
         
     </script>
