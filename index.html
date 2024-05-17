@@ -5,34 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Concepts</title>
-    <style>
-        #demo{
-            background-color: red;
-        }
-        #demo2{
-            background-color: aqua;
-        }
-    </style>
 </head>
 
 <body>
 
-    <h1>Root Nodes <br> document.body - The body of the document <br>
-        document.documentElement - The full document </h1>
+   <h1>Create new html element</h1>
+   <h1>Normal Insertion</h1>
+   <div id="div">
+    <p id="p1"> This is paragraph</p>
+    <p id="p2"> This is paragraph2</p>
+   </div>
 
-    <h1> 1> document.body - The body of the document</h1>
-    <p id="demo"></p>
+   <hr>
 
-    <h1> 2>document.documentElement - The full document</h1>
-    <p id="demo2"></p>
+   <h1>Insert Before</h1>
+   <div id="div2">
+    <p id="p3"> This is paragraph</p>
+    <p id="p4"> This is paragraph2</p>
+   </div>
+
+   <h1>Remove Element</h1>
+   <p id="p5">I am ok </p>
     
 
     <script>
+        // Create new html element
+        const para = document.createElement("p")
+        const node  = document.createTextNode("I am new element");
 
-        document.getElementById("demo").innerHTML = document.body.innerHTML;
+        para.appendChild(node);
 
-        document.getElementById("demo2").innerHTML = document.documentElement.innerHTML
+        const element = document.getElementById("div");
+        element.appendChild(para);
 
+        // insertBefore()
+        const para2 = document.createElement("p");
+        const node2 = document.createTextNode("I am new 2")
+        para2.appendChild(node2);
+
+        const element2 = document.getElementById("div2");
+        const child = document.getElementById("p4");
+        element2.insertBefore(para2, child);
+
+        // Remove element
+        const ele = document.getElementById("p5");
+        ele.remove();
+
+        
     </script>
 </body>
 
