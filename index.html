@@ -8,60 +8,43 @@
 </head>
 
 <body>
-    <h1>BOM window Navigator</h1>
+    <h1>BOM window Pop Up boxes</h1>
 
-    <h1>navigator.cookie</h1>
+    <h1>alert()</h1>
+
+    <h1>conferm()</h1>
+    <button type="button" onclick="myfunction()">conferm</button>
+    <p id="demo"></p>
+
+    <h1>prompt()</h1>
+    <button type="button" onclick="myfunction2()">get person name</button>
     <p id="demo1"></p>
-
-    <h1>navigator.appName</h1>
-    <p id="demo2"></p>
-
-    <h1>navigator.appCodeName</h1>
-    <p id="demo3"></p>
-
-    <h1>navigator.product</h1>
-    <p id="demo4"></p>
-
-    <h1>navigator.appVersion</h1>
-    <p id="demo5"></p>
-
-    <h1>navigator.userAgent</h1>
-    <p id="demo6"></p>
-
-    <h1>navigator.platform</h1>
-    <p id="demo7"></p>
-
-    <h1>navigator.language</h1>
-    <p id="demo8"></p>
-
-    <h1>navigator.online</h1>
-    <p id="demo9"></p>
-
-    <h1>navigator.javaEnabled()</h1>
-    <p id="demo10"></p>
 
 
     <script>
-        document.getElementById("demo1").innerHTML = "Cookies Enabled : " + navigator.cookieEnabled;
+        alert("Site is started")
 
-        document.getElementById("demo2").innerHTML = "Application Name is  : " + navigator.appName;
+        //    Conferm
+        function myfunction() {
+            var text;
+            if (confirm("Press button")) {text = "Press ok"}
+            else { text = "Press cancle" }
+            document.getElementById("demo").innerHTML = text
+        }
 
-        document.getElementById("demo3").innerHTML = "Application code name is : " +  navigator.appCodeName;
+        function myfunction2(){
+            let Person = prompt("Enter the Name");
+            let text;
+            if(Person=="" || Person==null){
+                text = "user cancle text"
+            }
+            else{
+                text = "Person name is "+ Person + ", Hi "+Person;
+            }
+            document.getElementById("demo1").innerHTML = text;
+        }
 
-        document.getElementById("demo4").innerHTML = "Product name is : " +  navigator.product
 
-        document.getElementById("demo5").innerHTML = "Version os browser is : " +  navigator.appVersion;
-
-        document.getElementById("demo6").innerHTML = "User agent sent to server is : " +  navigator.userAgent;
-
-        document.getElementById("demo7").innerHTML = "Operating system is : " +  navigator.platform
-
-        document.getElementById("demo8").innerHTML = "Browser language is : " + navigator.language
-
-        document.getElementById("demo9").innerHTML = "Browser is : " + navigator.onLine;
-
-        document.getElementById("demo10").innerHTML = "is java enabled: " + navigator.javaEnabled()
-        
     </script>
 </body>
 
