@@ -8,43 +8,31 @@
 </head>
 
 <body>
-    <h1>BOM window Pop Up boxes</h1>
+    <h1>BOM window Timing Events</h1>
 
-    <h1>alert()</h1>
+    <h1>setTimeout</h1>
+    <p>Click on try it it run the <strong>setTimeout</strong> function & on stop it run the <strong>clearTimeout</strong></p>
+    <button onclick="myVar = setTimeout(myfunction, 2000)">Try It</button>
+    <button onclick="clearTimeout(myVar)">Stop</button>
 
-    <h1>conferm()</h1>
-    <button type="button" onclick="myfunction()">conferm</button>
+    <h1>setInterval</h1>
     <p id="demo"></p>
-
-    <h1>prompt()</h1>
-    <button type="button" onclick="myfunction2()">get person name</button>
-    <p id="demo1"></p>
-
+    <p>Stop timer on click on <strong>Stop</strong> button it run clearInterval function</p>
+    <button onclick="clearInterval(myVar2)">Stop timer</button>
 
     <script>
-        alert("Site is started")
+        // function will run on setTimeout
+       function myfunction(){
+        alert("Hi rushikesh")
+       }
 
-        //    Conferm
-        function myfunction() {
-            var text;
-            if (confirm("Press button")) {text = "Press ok"}
-            else { text = "Press cancle" }
-            document.getElementById("demo").innerHTML = text
-        }
+    //    fuction run on setInterval
+    let myVar2 = setInterval(myTimer, 1000);
+    function myTimer(){
+        const d = new Date();
 
-        function myfunction2(){
-            let Person = prompt("Enter the Name");
-            let text;
-            if(Person=="" || Person==null){
-                text = "user cancle text"
-            }
-            else{
-                text = "Person name is "+ Person + ", Hi "+Person;
-            }
-            document.getElementById("demo1").innerHTML = text;
-        }
-
-
+        document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+    }
     </script>
 </body>
 
