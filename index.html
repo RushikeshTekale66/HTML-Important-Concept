@@ -4,37 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Concepts</title>
+    <title>BOM Concepts</title>
 </head>
 
 <body>
-    <h1>BOM window location</h1>
+    <h1>BOM window history</h1>
 
-    <h1>window.location.href</h1>
-    <p id="demo1"></p>
+    <h1>window.history.forward()</h1>
+    <input type="button" value="forward" onclick="forward()">
 
-    <h1>window.location.hostname</h1>
-    <p id="demo2"></p>
-
-    <h1>window.location.pathname</h1>
-    <p id="demo3"></p>
-
-    <h1>window.location.protocol</h1>
-    <p id="demo4"></p>
-
-    <h1>window.location.assign()</h1>
-    <button type="button" value="Open new document" onclick="newDoc()">assign (clickme)</button>
+    <h1>window.history.back()</h1>
+    <input type="button" value="back" onclick="back()">
 
     <script>
-        document.getElementById("demo1").innerHTML = window.location.href
-        document.getElementById("demo2").innerHTML = window.location.hostname
-        document.getElementById("demo3").innerHTML = window.location.pathname
-        document.getElementById("demo4").innerHTML = window.location.protocol
-
-        function newDoc(){
-            window.location.assign("https://google.com")
+        function forward(){
+            window.history.forward();
         }
-       
+       function back(){
+        window.history.back()
+       }
         
     </script>
 </body>
