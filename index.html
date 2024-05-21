@@ -8,33 +8,33 @@
 </head>
 
 <body>
-    <h1>BOM window screen</h1>
+    <h1>BOM window location</h1>
 
-    <h1>screen.height</h1>
+    <h1>window.location.href</h1>
     <p id="demo1"></p>
 
-    <h1>screen.width</h1>
+    <h1>window.location.hostname</h1>
     <p id="demo2"></p>
 
-    <h1>screen.availWidth</h1>
+    <h1>window.location.pathname</h1>
     <p id="demo3"></p>
 
-    <h1>screen.availHeight</h1>
+    <h1>window.location.protocol</h1>
     <p id="demo4"></p>
 
-    <h1>screen.colorDepth</h1>
-    <p id="demo5"></p>
-
-    <h1>screen.pixelDepth</h1>
-    <p id="demo6"></p>
+    <h1>window.location.assign()</h1>
+    <button type="button" value="Open new document" onclick="newDoc()">assign (clickme)</button>
 
     <script>
-        document.getElementById("demo1").innerHTML = screen.height +"px"
-        document.getElementById("demo2").innerHTML = screen.width +"px"
-        document.getElementById("demo3").innerHTML = screen.availHeight +"px"
-        document.getElementById("demo4").innerHTML = screen.availWidth +"px"
-        document.getElementById("demo5").innerHTML = screen.colorDepth +"bit"
-        document.getElementById("demo6").innerHTML = screen.pixelDepth +"bit"
+        document.getElementById("demo1").innerHTML = window.location.href
+        document.getElementById("demo2").innerHTML = window.location.hostname
+        document.getElementById("demo3").innerHTML = window.location.pathname
+        document.getElementById("demo4").innerHTML = window.location.protocol
+
+        function newDoc(){
+            window.location.assign("https://google.com")
+        }
+       
         
     </script>
 </body>
