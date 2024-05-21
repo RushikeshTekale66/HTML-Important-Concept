@@ -8,28 +8,10 @@
 </head>
 
 <body>
-
-   <h1>DOM NodeList Object</h1>
-   <p>First</p>
-   <p>Second</p>
-   <p>Third</p>
-
-   <h4>Length of NodeList</h4>
-   <h5 id="length"></h5>
-
-   <h1>Node List Demo</h1>
-   <p id="demo"></p>
-
+    <h1>BOM window Height & Width</h1>
+    <p id="demo"></p>
     <script>
-        // NodeList
-        const myNodeList = document.querySelectorAll("p");
-
-        // Length of nodeList
-        document.getElementById("length").innerHTML = myNodeList.length;
-
-        // Access Node List
-        document.getElementById("demo").innerHTML = "Inner html of second paragraph is :  " + myNodeList[0].innerHTML;
-       
+        document.getElementById("demo").innerHTML = "Browser inner height " + window.innerHeight + "px <br> " + "Browser inner width " + window.innerWidth + "px"
         
     </script>
 </body>
