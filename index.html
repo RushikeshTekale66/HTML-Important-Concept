@@ -8,21 +8,59 @@
 </head>
 
 <body>
-    <h1>BOM window history</h1>
+    <h1>BOM window Navigator</h1>
 
-    <h1>window.history.forward()</h1>
-    <input type="button" value="forward" onclick="forward()">
+    <h1>navigator.cookie</h1>
+    <p id="demo1"></p>
 
-    <h1>window.history.back()</h1>
-    <input type="button" value="back" onclick="back()">
+    <h1>navigator.appName</h1>
+    <p id="demo2"></p>
+
+    <h1>navigator.appCodeName</h1>
+    <p id="demo3"></p>
+
+    <h1>navigator.product</h1>
+    <p id="demo4"></p>
+
+    <h1>navigator.appVersion</h1>
+    <p id="demo5"></p>
+
+    <h1>navigator.userAgent</h1>
+    <p id="demo6"></p>
+
+    <h1>navigator.platform</h1>
+    <p id="demo7"></p>
+
+    <h1>navigator.language</h1>
+    <p id="demo8"></p>
+
+    <h1>navigator.online</h1>
+    <p id="demo9"></p>
+
+    <h1>navigator.javaEnabled()</h1>
+    <p id="demo10"></p>
+
 
     <script>
-        function forward(){
-            window.history.forward();
-        }
-       function back(){
-        window.history.back()
-       }
+        document.getElementById("demo1").innerHTML = "Cookies Enabled : " + navigator.cookieEnabled;
+
+        document.getElementById("demo2").innerHTML = "Application Name is  : " + navigator.appName;
+
+        document.getElementById("demo3").innerHTML = "Application code name is : " +  navigator.appCodeName;
+
+        document.getElementById("demo4").innerHTML = "Product name is : " +  navigator.product
+
+        document.getElementById("demo5").innerHTML = "Version os browser is : " +  navigator.appVersion;
+
+        document.getElementById("demo6").innerHTML = "User agent sent to server is : " +  navigator.userAgent;
+
+        document.getElementById("demo7").innerHTML = "Operating system is : " +  navigator.platform
+
+        document.getElementById("demo8").innerHTML = "Browser language is : " + navigator.language
+
+        document.getElementById("demo9").innerHTML = "Browser is : " + navigator.onLine;
+
+        document.getElementById("demo10").innerHTML = "is java enabled: " + navigator.javaEnabled()
         
     </script>
 </body>
