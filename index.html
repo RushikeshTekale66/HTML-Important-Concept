@@ -8,10 +8,33 @@
 </head>
 
 <body>
-    <h1>BOM window Height & Width</h1>
-    <p id="demo"></p>
+    <h1>BOM window screen</h1>
+
+    <h1>screen.height</h1>
+    <p id="demo1"></p>
+
+    <h1>screen.width</h1>
+    <p id="demo2"></p>
+
+    <h1>screen.availWidth</h1>
+    <p id="demo3"></p>
+
+    <h1>screen.availHeight</h1>
+    <p id="demo4"></p>
+
+    <h1>screen.colorDepth</h1>
+    <p id="demo5"></p>
+
+    <h1>screen.pixelDepth</h1>
+    <p id="demo6"></p>
+
     <script>
-        document.getElementById("demo").innerHTML = "Browser inner height " + window.innerHeight + "px <br> " + "Browser inner width " + window.innerWidth + "px"
+        document.getElementById("demo1").innerHTML = screen.height +"px"
+        document.getElementById("demo2").innerHTML = screen.width +"px"
+        document.getElementById("demo3").innerHTML = screen.availHeight +"px"
+        document.getElementById("demo4").innerHTML = screen.availWidth +"px"
+        document.getElementById("demo5").innerHTML = screen.colorDepth +"bit"
+        document.getElementById("demo6").innerHTML = screen.pixelDepth +"bit"
         
     </script>
 </body>
