@@ -1,39 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOM Concepts</title>
-</head>
-
-<body>
-    <h1>BOM window Timing Events</h1>
-
-    <h1>setTimeout</h1>
-    <p>Click on try it it run the <strong>setTimeout</strong> function & on stop it run the <strong>clearTimeout</strong></p>
-    <button onclick="myVar = setTimeout(myfunction, 2000)">Try It</button>
-    <button onclick="clearTimeout(myVar)">Stop</button>
-
-    <h1>setInterval</h1>
-    <p id="demo"></p>
-    <p>Stop timer on click on <strong>Stop</strong> button it run clearInterval function</p>
-    <button onclick="clearInterval(myVar2)">Stop timer</button>
-
-    <script>
-        // function will run on setTimeout
-       function myfunction(){
-        alert("Hi rushikesh")
-       }
-
-    //    fuction run on setInterval
-    let myVar2 = setInterval(myTimer, 1000);
-    function myTimer(){
-        const d = new Date();
-
-        document.getElementById("demo").innerHTML = d.toLocaleTimeString();
-    }
-    </script>
-</body>
-
-</html>
+<div style="display: flex; flex-direction: column; width: 300px; border: 1px solid black; padding: 10px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+      <div style="width: 30%; height: 50px; border: 1px solid black;"></div>
+      <div style="width: 30%; height: 50px; border: 1px solid black;"></div>
+      <div style="width: 30%; height: 100px; border: 1px solid black;"></div>
+    </div>
+    <div style="flex-grow: 1; height: 50px; border: 1px solid black;"></div>
+  </div>
+  
